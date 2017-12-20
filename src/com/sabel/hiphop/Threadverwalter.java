@@ -34,17 +34,13 @@ public class Threadverwalter implements Runnable {
         System.out.println("thread beendet");
     }
     public static void main(String[] args) throws IOException {
-
+        boolean fertig = false;
         Threadverwalter threadverwalter = new Threadverwalter("");
-
-
         Scanner scanner = new Scanner(System.in);
         String eingabe = "";
         int i = 0;
-
         Ausgabe();
-
-        while (true) {
+        while (!fertig) {
             eingabe = scanner.nextLine();
             switch (eingabe) {
                 case "s":
@@ -55,7 +51,8 @@ public class Threadverwalter implements Runnable {
                     break;
                 case "q":
                     threadverwalter.stop();
-                    System.exit(0);
+                    //System.exit(0);
+                    fertig = true;
                     break;
             }
             Ausgabe();
