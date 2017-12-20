@@ -33,7 +33,6 @@ public class Threadverwalter implements Runnable {
         }
         System.out.println("thread beendet");
     }
-
     public static void main(String[] args) throws IOException {
 
         Threadverwalter threadverwalter = new Threadverwalter("");
